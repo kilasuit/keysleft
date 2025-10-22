@@ -80,4 +80,11 @@ var ko = {
         equal(viewModel.charPerSecond(), expected);
     });
 
+    test('char per second locale formatting', function () {
+        var cps = viewModel.charPerSecond();
+        var expected = cps.toFixed(4);
+
+        equal(viewModel.charPerSecondLocale(), expected);
+    });
+
 }());

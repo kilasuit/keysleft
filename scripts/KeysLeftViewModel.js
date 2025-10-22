@@ -82,6 +82,10 @@ function KeysLeftViewModel(age, wpm) {
                 return self.programsLeft().toLocaleString();
             }, self);
 
+            self.charPerSecondLocale = ko.computed(function () {
+                return self.charPerSecond().toFixed(4);
+            }, self);
+
             self.shouldDisplay = ko.computed(function () {
                 var toShow = true;
 
